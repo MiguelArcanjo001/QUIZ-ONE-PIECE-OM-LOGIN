@@ -1,0 +1,114 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
+
+/* RESET básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.corpo {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1E90FF, #F7D794); /* azul mar -> dourado suave */
+    color: #F5F5F5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: rgba(0,0,0,0.4); /* fundo semi-transparente */
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    width: 350px;
+    text-align: center;
+}
+
+/* Header do login */
+.login-header .titulo {
+    font-family: 'Press Start 2P', cursive;
+    color: #FFD700;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #8B4513;
+}
+
+.login-header p {
+    color: #F5F5F5;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Formulário */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form label {
+    text-align: left;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    font-size: 14px;
+}
+
+.login-form input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+/* Botão */
+.login-form button {
+    margin-top: 10px;
+    padding: 0.8rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #fff;
+    background-color: #E63946;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #FFD700;
+    color: #1a1a1a;
+    transform: scale(1.05);
+}
+
+/* Link de cadastro */
+.signup-text {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.signup-text a {
+    color: #1E90FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-text a:hover {
+    color: #FFD700;
+}
+
+/* Responsivo */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}

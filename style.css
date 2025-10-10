@@ -1,0 +1,163 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
+
+/* RESET básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body.corpo { font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #F5F5F5; 
+    background: linear-gradient(to bottom, #1E3A5F, #4682B4, #87CEFA);    }
+
+header { text-align: center;  
+    padding: 2rem;
+   position: relative;
+}
+
+main { padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+     
+}
+
+
+details , summary { padding-left: 0.5rem;
+    color: black;
+}
+
+h1.titulo { font-family: 'Press Start 2P', cursive;
+  color: #FFD700;
+  text-shadow: 3px 3px #8B4513;
+  background-color: #1E3A5F; /* mesma cor do fundo pra não ficar transparente */
+  position: sticky;
+  top:0; 
+  z-index: 999; /* garante que fica por cima */
+  padding: 0.5rem;
+  text-align: center;
+    
+ }
+
+ section{ display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: 2px solid whitesmoke;  
+    border-radius: 15px;
+  
+
+ }
+
+h2{ color:#FFD700;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+p{ color: #F5F5F5;
+    
+    
+
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #E63946;
+    
+}
+
+input[type="text"],input[type="password"],input[type="date"],input[type="email"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid whitesmoke;
+    outline: none;
+    border-radius: 5px;
+    background-color: transparent;
+
+}
+
+input::placeholder { color: black; 
+}
+
+select {
+    
+    cursor: pointer;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+}
+    details{
+        width: 200px;
+         cursor: pointer;
+    }
+img{
+    width: 30rem;
+    border-radius: 5px;
+}
+
+table{ text-align: center;
+    width: 50%;
+    border-collapse: collapse;
+     background-color: #FAEBD7;
+    color: black;
+    padding: 1rem;
+    
+}
+
+td{
+    padding: 0.1rem;    
+}
+tfoot td{
+position: relative;
+left: 95px;
+}
+
+ol{width: 400px;
+    padding-left: 1.7rem;
+    
+}
+li{
+    margin: 0.4rem;
+}
+
+fieldset{
+    border:2px solid whitesmoke ;
+    border-radius: 5px;
+    padding: 1rem;
+}
+legend{
+    font-family: 'Press Start 2P', cursive;
+     color:#FFD700;
+}
+
+
+legend{
+    padding: 0 0.5rem;
+}
+textarea {
+
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid;
+    background-color: transparent;
+   
+}
+
+button{
+    border: none;
+    padding: 0.8rem;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer p {
+    color: black;
+}
+footer a {
+
+    text-decoration: none;;
+}
