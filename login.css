@@ -10,16 +10,16 @@
 
 body.corpo {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #1E90FF, #F7D794); /* azul mar -> dourado suave */
-    color: #F5F5F5;
-    height: 100vh;
+    background: linear-gradient(135deg, #1E90FF, #F7D794);
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    color: #F5F5F5;
 }
 
 .login-container {
-    background-color: rgba(0,0,0,0.4); /* fundo semi-transparente */
+    background-color: rgba(0,0,0,0.4);
     padding: 2rem 3rem;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
@@ -27,7 +27,6 @@ body.corpo {
     text-align: center;
 }
 
-/* Header do login */
 .login-header .titulo {
     font-family: 'Press Start 2P', cursive;
     color: #FFD700;
@@ -42,11 +41,10 @@ body.corpo {
     font-weight: bold;
 }
 
-/* Formulário */
 .login-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .login-form label {
@@ -71,7 +69,6 @@ body.corpo {
 
 /* Botão */
 .login-form button {
-    margin-top: 10px;
     padding: 0.8rem;
     font-family: 'Press Start 2P', cursive;
     font-size: 14px;
@@ -103,6 +100,23 @@ body.corpo {
 
 .signup-text a:hover {
     color: #FFD700;
+}
+
+/* Mensagens de erro */
+#errorlogin,
+#errorpass {
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+    color: #FF4136; /* vermelho */
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    min-height: 18px;
+}
+
+#errorlogin.show,
+#errorpass.show {
+    opacity: 1;
 }
 
 /* Responsivo */
