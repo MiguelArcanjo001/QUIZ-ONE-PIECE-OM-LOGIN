@@ -12,17 +12,22 @@
             <h1 class="titulo">ONE PIECE LOGIN</h1>
             <p>Entre para embarcar na aventura!</p>
         </header>
-        <form class="login-form" action="quiz.html" method="get">
+        <form class="login-form" action="quiz.html" method="post">
             <label for="username">Usuário</label>
-            <input type="text" id="username" name="username" placeholder="Digite seu nome de pirata" required>
+            <input type="text" id="username" name="username" placeholder="Digite seu nome de pirata">
+            <p id="errorlogin"></p>
 
             <label for="password">Senha</label>
-            <input type="password" id="password" name="password" placeholder="Digite sua senha secreta" required>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha secreta" >
+            <p id="errorpass"></p>
 
-            <button type="submit" action>Login</button  href="quiz.html">
+            <button  id="button" type="submit" action>Login</button  href="quiz.html">
             <p class="signup-text">Não tem conta? <a href="">Crie aqui</a></p>
         </form>
     </div>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
+
+
 
