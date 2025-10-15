@@ -4,40 +4,54 @@ const passlogin = document.getElementById("password") // campo de senha do usuá
 const errormsg = document.getElementById("errorlogin") // <p> que mostra erro do username
 const errormsgpass = document.getElementById("errorpass") // <p> que mostra erro da senha
 
+//regex
+const loginlenght = v => v.length >= 3
+const passum = v => /[0-9]/.test(v)
+const loginSimbol = v => /[!@#\$%\^&\*\(\)\-\+_=\\[\]{};:'"\\|,<.>\/\?`~]/.test(v);
+
 // Pegando o botão de login
 const button = document.getElementById("button");
 
 // Evento de clique no botão
-button.addEventListener("click", function (event) {
-    event.preventDefault(); // impede envio automático do form
+button.addEventListener("click", function(event) {
+    event.preventDefault();
 
-    let ok = true; // assume que tudo está preenchido corretamente
+    let ok = true;
 
     // Validação do username
-    if (namelogin.value.trim() === "") { // trim remove espaços nas bordas
-        errormsg.textContent = "defina um nome de usuario para entrar"; // mostra erro
-        errormsg.classList.add("show")
-        ok = false; // marca que houve erro
+    if (namelogin.value.trim() === "") {
+        errormsg.textContent = "Defina um nome de usuário";
+        errormsg.classList.add("show");
+        ok = false;
     } else {
-        errormsg.textContent = ""; // limpa mensagem de erro
-        errormsgpass.classList.remove("show")
+        errormsg.textContent = "";
+        errormsg.classList.remove("show");
+    
+     if (!loginlenght(namelogin.value.trim())) {
+        errormsg.textContent = "o usuario deve ter pelo menos 3 caracteres";
+        errormsg.classList.add("show");
+        ok = false;
+    } else {
+        errormsg.textContent = "";
+        errormsg.classList.remove("show");
     }
 
-    // Validação do password
-    if (passlogin.value.trim() === "") { // trim evita apenas espaços
-        errormsgpass.textContent = "escolhan uma senha para entrar"; // mostra erro
-        errormsgpass.classList.add("show")
-        ok = false; // marca erro
+    // Validação da senha
+    if ((passlogin.value.trim() === "")) {
+        errormsgpass.textContent = "defina uma senha para entrar";
+        errormsgpass.classList.add("show");
+        ok = false;
     } else {
-        errormsgpass.textContent = ""; // limpa mensagem de erro
-       errormsgpass.classList.remove("show")
+        errormsgpass.textContent = "";
+        errormsgpass.classList.remove("show");
     }
 
     // Se tudo estiver correto
     if (ok) {
-        window.location.href = "quiz.html"; // redireciona para o quiz
+        window.location.href = "quiz.html";
     }
-});
+}});
+
 
 // Eventos de digitação (input) para limpar erros em tempo real
 namelogin.addEventListener("input", () => {
@@ -49,3 +63,8 @@ passlogin.addEventListener("input", () => {
     if (passlogin.value.trim() !== "") errormsgpass.textContent = ""; // limpa mensagem da senha
     errormsgpass.classList.remove("show")
 });
+
+
+
+
+
