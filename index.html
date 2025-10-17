@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - One Piece</title>
     <link rel="stylesheet" href="login.css">
 </head>
+
 <body class="corpo">
     <div class="login-container">
         <header class="login-header">
@@ -15,19 +17,20 @@
         <form class="login-form" action="quiz.html" method="post">
             <label for="username">Usuário</label>
             <input type="text" id="username" name="username" placeholder="Digite seu nome de pirata">
-            <p id="errorlogin"></p>
+            <p id="lenghtlogin"></p>
+            <p id="space"></p>
 
             <label for="password">Senha</label>
-            <input type="password" id="password" name="password" placeholder="Digite sua senha secreta" >
-            <p id="errorpass"></p>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha secreta">
+            <p id="caracteres"></p>
+            <p id="numero"></p>
+            <p id="simbolo"></p>
 
-            <button  id="button" type="submit" action>Login</button  href="quiz.html">
+            <button id="button" type="submit" action>Login</button href="quiz.html">
             <p class="signup-text">Não tem conta? <a href="">Crie aqui</a></p>
         </form>
     </div>
     <script type="module" src="script.js"></script>
 </body>
+
 </html>
-
-
-
