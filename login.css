@@ -126,3 +126,78 @@ body.corpo {
         padding: 1.5rem;
     }
 }
+
+/* Fonte pirata e básico */
+p {
+  font-family: 'Treasure Map', cursive;
+  font-size: 0.9rem;
+  margin: 4px 0;
+  transition: transform 0.15s;
+}
+
+/* Estado de sucesso */
+.sucesso {
+  color: #4dff4d;
+  font-weight: bold;
+  animation: jump 0.15s;
+}
+
+/* Estado de erro */
+.erro {
+  color: #ff4d4d;
+  font-weight: bold;
+  animation: shake 0.15s;
+}
+
+/* Keyframes para animação de pulinho (sucesso) */
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Keyframes para animação de shake (erro) */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Contêiner das mensagens */
+#loginMessages, #passMessages {
+  margin-top: 5px;
+}
+
+/* Extra: fundo pirata e botão estilizado */
+body {
+  background: linear-gradient(to bottom, #4682B4, #1E3F66);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: rgba(0,0,0,0.7);
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #000;
+}
+
+button {
+  background-color: #FFD700;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #FFC107;
+}
+
